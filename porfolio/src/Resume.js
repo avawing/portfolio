@@ -3,13 +3,13 @@ import {Jumbotron, Button} from 'reactstrap'
 
 function Resume(){
     return(
-        <Jumbotron>
+        <Jumbotron style = {{backgroundColor: "#B7EBF6"}}>
         <h1 className="display-3">Ava Wingfield</h1>
         <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr className="my-2" />
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <p className="lead">
-          <Button color="primary">Learn More</Button>
+          <Button className = "bg-decor">Learn More</Button>
         </p>
       </Jumbotron>
     )

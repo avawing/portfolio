@@ -5,7 +5,7 @@ import Splash from './Splash'
 import Projects from './Projects'
 import Contact from './Contact'
 import Resume from './Resume'
-import "./App.css";
+
 
 function App() {
   return (
