@@ -1,4 +1,6 @@
-import React from "react";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, {useState} from "react";
 import {
   Jumbotron,
   Button,
@@ -7,7 +9,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle, CardDeck
+  CardSubtitle, CardDeck, Modal, ModalBody, ModalFooter, ModalHeader
 } from "reactstrap";
 import Carousel from "./Carousel";
 
@@ -58,7 +60,7 @@ const items = [
     key: "5",
   },
   {
-    src: require("./assets/Screenshot (145).png"), //New Photo
+    src: require("./assets/Screenshot (146).png"),
     header: "Web App",
     role: "Back End Engineer",
     tech: "Node JS, SQL, Jest",
@@ -69,6 +71,10 @@ const items = [
 ];
 
 function Projects() {
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
   return (
     <div>
       <Jumbotron style={{ backgroundColor: "#B7EBF6" }}>
@@ -85,16 +91,31 @@ function Projects() {
       </Jumbotron>
       <Carousel />
       <CardDeck style = {{justifyContent: "center"}}>
-      {items.map((item) => 
-        <Card key={item.key} style={{minWidth:"30em", maxWidth:"30em", margin:"2rem",padding: "2rem"}}>
+      {items.map((item) => <>
+        <Card key={item.key} style={{minWidth:"20em", maxWidth:"25em", margin:"2rem",padding: "2rem"}}>
           <CardImg top width="100%" src={item.src} alt="Card image cap" />
           <CardBody>
             <CardTitle><h4>{item.header}</h4></CardTitle>
             <CardSubtitle>{item.role}</CardSubtitle>
             <CardText>{item.tech}</CardText>
-            <Button className="bg-decor">Button</Button>
+            <Button className="bg-decor" onClick={toggle}>Button</Button>
           </CardBody>
         </Card>
+
+<Modal isOpen={modal} toggle={toggle}>
+<ModalHeader toggle={toggle}>{item.header}</ModalHeader>
+<ModalBody>
+  {item.desc}
+</ModalBody>
+<CardImg top width="100%" src={item.src} alt="Card image cap" />
+<ModalFooter>
+<FontAwesomeIcon icon = {faGithub} />
+  <Button className="bg-decor" onClick={toggle}>Visit</Button>{' '}
+  <Button color="secondary" onClick={toggle}>Cancel</Button>
+</ModalFooter>
+
+</Modal>
+</>
       )}
 </CardDeck>
       </div>

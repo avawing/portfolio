@@ -33,6 +33,10 @@ const items = [
     src: require("./assets/Screenshot (145).png"),
     key: "5",
   },
+  {
+    src: require("./assets/Screenshot (146).png"),
+    key: "6",
+  },
 ];
 
 function Carousel() {
