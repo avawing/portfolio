@@ -37,6 +37,7 @@ function Splash(){
             <Button className = "bg-decor">Learn More</Button>
           </p>
         </Jumbotron>
+        <div><img src = "../assets/Screenshot(58).png"></img></div>
 
         <div><UncontrolledCarousel items={items} /></div>
         <div style = {{display: "grid", gridTemplateColumns:"auto auto"}}>
