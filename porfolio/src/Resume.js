@@ -1,18 +1,31 @@
-import React from 'react'
-import {Jumbotron, Button} from 'reactstrap'
+import React from "react";
+import { Jumbotron, Button } from "reactstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCss3, faHtml5, faJs, faNode, faPython, faReact} from '@fortawesome/free-brands-svg-icons'
 
-function Resume(){
-    return(
-        <Jumbotron style = {{backgroundColor: "#B7EBF6"}}>
-        <h1 className="display-3">Ava Wingfield</h1>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+function Resume() {
+  return (
+    <div>
+      <Jumbotron style={{ backgroundColor: "#B7EBF6" }}>
+        <h1 className="display-3">Aveline Wingfield</h1>
+        <p className="lead">Call me Ava.</p>
         <hr className="my-2" />
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>
+          A lifetime of experience in creative fields, means creative solutions
+          to unusual problems.
+        </p>
         <p className="lead">
-          <Button className = "bg-decor">Learn More</Button>
+          <Button className="bg-decor">Learn More</Button>
         </p>
       </Jumbotron>
-    )
+      <div style={{ display: "flex", justifyContent: "space-around", padding: "1rem" }}>
+        <FontAwesomeIcon icon={faHtml5} /> <FontAwesomeIcon icon={faCss3} />{" "}
+        <FontAwesomeIcon icon={faJs} /> <FontAwesomeIcon icon={faReact} />
+        <FontAwesomeIcon icon={faNode} />
+        <FontAwesomeIcon icon={faPython} />
+      </div>
+    </div>
+  );
 }
 
-export default Resume
+export default Resume;

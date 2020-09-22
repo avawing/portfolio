@@ -1,17 +1,22 @@
 import React from 'react'
 import { Jumbotron, Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCss3, faHtml5, faJs, faNode, faPython, faReact} from '@fortawesome/free-brands-svg-icons'
 function Contact(){
     return(
       <div>
       <Jumbotron style = {{backgroundColor: "#B7EBF6"}}>
         <h1 className="display-3">Did I Catch your Eye?</h1>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p className="lead">Aveline Wingfield - Call me Ava.</p>
         <hr className="my-2" />
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>Call me anything you want, as long as you call me!</p>
         <p className="lead">
           <Button className = "bg-decor">Learn More</Button>
         </p>
       </Jumbotron>
+      <div style={{ display: "flex", justifyContent: "space-around", padding: "1rem" }}>
+        <FontAwesomeIcon icon = {faHtml5}/> <FontAwesomeIcon icon = {faCss3}/> <FontAwesomeIcon icon = {faJs}/> <FontAwesomeIcon icon = {faReact}/><FontAwesomeIcon icon = {faNode}/><FontAwesomeIcon icon = {faPython}/>
+        </div>
       <div style = {{display: "grid", gridTemplateColumns:"auto auto"}}>
       <Form style = {{padding: "1rem"}}>
       <FormGroup>

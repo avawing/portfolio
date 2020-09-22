@@ -5,11 +5,15 @@ import Splash from './Splash'
 import Projects from './Projects'
 import Contact from './Contact'
 import Resume from './Resume'
+import { Container, Row } from "reactstrap";
+
 
 
 function App() {
   return (
     <div>
+      <Container><Row>
+        </Row></Container>
       <Navbar />
       <Route exact path = "/">
         <Splash />
