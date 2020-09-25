@@ -13,10 +13,11 @@ import {
   faReact,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import bgimage from './assets/jumbotron.jpg'
 function Contact() {
   return (
     <div>
-      <Jumbotron style={{ backgroundColor: "#B7EBF6" }}>
+      <Jumbotron style={{ backgroundImage: `url(${bgimage})`, backgroundSize: 'cover' }}>
         <h1 className="display-3">Did I Catch your Eye?</h1>
         <p className="lead">Aveline Wingfield - Call me Ava.</p>
         <hr className="my-2" />

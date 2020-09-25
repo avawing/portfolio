@@ -2,11 +2,11 @@ import React from "react";
 import { Jumbotron, Button } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCss3, faGit, faHtml5, faJs, faNode, faPython, faReact} from '@fortawesome/free-brands-svg-icons'
-
+import bgimage from './assets/jumbotron.jpg'
 function Resume() {
   return (
     <div>
-      <Jumbotron style={{ backgroundColor: "#B7EBF6" }}>
+      <Jumbotron style={{ backgroundImage: `url(${bgimage})`, backgroundSize: 'cover' }}>
         <h1 className="display-3">Aveline Wingfield</h1>
         <p className="lead">Call me Ava.</p>
         <hr className="my-2" />
@@ -24,6 +24,10 @@ function Resume() {
         <FontAwesomeIcon icon={faNode} /> <FontAwesomeIcon icon = {faGit} />
         <FontAwesomeIcon icon={faPython} />
       </div>
+      <div style = {{display: "flex", justifyContent: "space-around"}}>
+      <iframe src="https://resume.creddle.io/embed/29z0mf5wncw"
+  width="854" height="1105" seamless></iframe>
+  </div>
     </div>
   );
 }

@@ -6,13 +6,13 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
 import Carousel from "./Carousel";
+import bgimage from './assets/jumbotron.jpg'
 
 function Splash() {
   return (
     <div>
-      <Jumbotron style={{ backgroundColor: "#B7EBF6" }}>
+      <Jumbotron style={{ backgroundImage: `url(${bgimage})`, backgroundSize: 'cover' }}>
         <h1 className="display-3">Aveline Wingfield</h1>
         <p className="lead">Virginia based Full Stack Developer.</p>
         <hr className="my-2" />

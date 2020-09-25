@@ -11,7 +11,7 @@ import {
   CardTitle,
   CardSubtitle, CardDeck, Modal, ModalBody, ModalFooter, ModalHeader
 } from "reactstrap";
-import Carousel from "./Carousel";
+import bgimage from './assets/jumbotron.jpg'
 
 const items = [
   {
@@ -77,7 +77,7 @@ function Projects() {
 
   return (
     <div>
-      <Jumbotron style={{ backgroundColor: "#B7EBF6" }}>
+      <Jumbotron style={{ backgroundImage: `url(${bgimage})`, backgroundSize: 'cover' }}>
         <h1 className="display-3">Aveline Wingfield</h1>
         <p className="lead">Projects and Sundry</p>
         <hr className="my-2" />
@@ -89,7 +89,6 @@ function Projects() {
           <Button className="bg-decor">Learn More</Button>
         </p>
       </Jumbotron>
-      <Carousel />
       <CardDeck style = {{justifyContent: "center"}}>
       {items.map((item) => <>
         <Card key={item.key} style={{minWidth:"20em", maxWidth:"25em", margin:"2rem",padding: "2rem"}}>
@@ -102,7 +101,7 @@ function Projects() {
           </CardBody>
         </Card>
 
-<Modal isOpen={modal} toggle={toggle}>
+<Modal isOpen={modal} toggle={toggle} key = {item.key}>
 <ModalHeader toggle={toggle}>{item.header}</ModalHeader>
 <ModalBody>
   {item.desc}
