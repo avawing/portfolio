@@ -15,7 +15,7 @@ function Resume() {
           to unusual problems.
         </p>
         <p className="lead">
-          <Button className="bg-decor">Learn More</Button>
+        <Button className="bg-decor"><a href='https://drive.google.com/uc?export=download&id=1j3KYwP0m_OeM-5ywiArxSnC9vfnfnwFL' download="WingfieldResume">Learn More</a></Button>
         </p>
       </Jumbotron>
       <div style={{ display: "flex", justifyContent: "space-around", padding: "1rem" }}>

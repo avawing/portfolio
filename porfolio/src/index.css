@@ -17,7 +17,9 @@ h5,
 h6 {
   font-family: "Cinzel Decorative", cursive;
 }
-
+a{
+  color: white;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -30,7 +32,7 @@ a.bg-decor:focus,
 button.bg-decor:hover,
 button.bg-decor:focus {
   background-color: #ffebee !important;
-  color: #eeacaa;
+  color: #eeacaa !important;
 }
 
 button:focus {

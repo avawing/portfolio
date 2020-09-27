@@ -1,4 +1,13 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faCss3,
+    faGit,
+  faHtml5,
+  faJs,
+  faNode,
+  faPython,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {useState} from "react";
 import {
@@ -86,9 +95,21 @@ function Projects() {
           displayed for your perusal.
         </p>
         <p className="lead">
-          <Button className="bg-decor">Learn More</Button>
+        <Button className="bg-decor"><a href='https://drive.google.com/uc?export=download&id=1j3KYwP0m_OeM-5ywiArxSnC9vfnfnwFL' download="WingfieldResume">Learn More</a></Button>
         </p>
       </Jumbotron>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          padding: "1rem",
+        }}
+      >
+        <FontAwesomeIcon icon={faHtml5} /> <FontAwesomeIcon icon={faCss3} />{" "}
+        <FontAwesomeIcon icon={faJs} /> <FontAwesomeIcon icon={faReact} />
+        <FontAwesomeIcon icon={faNode} /> <FontAwesomeIcon icon = {faGit} />
+        <FontAwesomeIcon icon={faPython} />
+      </div>
       <CardDeck style = {{justifyContent: "center"}}>
       {items.map((item) => <>
         <Card key={item.key} style={{minWidth:"20em", maxWidth:"25em", margin:"2rem",padding: "2rem"}}>

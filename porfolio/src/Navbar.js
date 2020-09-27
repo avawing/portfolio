@@ -10,9 +10,9 @@ function Navbar() {
 
   return (
     <div>
-      <Nav>
+      <Nav style = {{backgroundColor: "#0F94BD"}}>
         <NavItem>
-          <NavLink>
+          <NavLink style = {{color: "white", textDecoration:"none"}}>
             <Link to="/">Home</Link>
           </NavLink>
         </NavItem>
