@@ -12,7 +12,7 @@ function Navbar() {
     <div>
       <Nav style = {{backgroundColor: "#0F94BD"}}>
         <NavItem>
-          <NavLink style = {{color: "white", textDecoration:"none"}}>
+          <NavLink>
             <Link to="/">Home</Link>
           </NavLink>
         </NavItem>
