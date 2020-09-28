@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Jumbotron, Button, Form, FormGroup, Label, Input,Card } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -39,6 +39,7 @@ function Contact() {
         <FontAwesomeIcon icon={faPython} />
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "auto auto" }}>
+        
         <Form style={{ padding: "1rem" }}>
           <FormGroup>
             <Label for="subject">Subject</Label>
@@ -58,6 +59,7 @@ function Contact() {
           </FormGroup>
           <Button className="bg-decor">Send</Button>
         </Form>
+        <Card style ={{display: "flex", justifyContent: "center"}}>
         <div style={{ textAlign: "center", padding: "1rem" }}>
           <h3>Contact Information</h3>
           <p>Aveline Wingfield</p>
@@ -70,7 +72,9 @@ function Contact() {
             <FontAwesomeIcon icon={faLinkedin} />
             <FontAwesomeIcon icon={faTwitter} />
           </div>
+          
         </div>
+        </Card>
       </div>
     </div>
   );
