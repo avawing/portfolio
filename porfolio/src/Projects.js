@@ -1,5 +1,4 @@
 import {
-  faGithub,
   faCss3,
     faGit,
   faHtml5,
@@ -9,17 +8,13 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, {useState} from "react";
+import React from "react";
 import {
   Jumbotron,
   Button,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle, CardDeck, Modal, ModalBody, ModalFooter, ModalHeader
+  CardDeck
 } from "reactstrap";
+import Project from './Project'
 import bgimage from './assets/jumbotron.jpg'
 
 const items = [
@@ -31,6 +26,7 @@ const items = [
     desc:
       "For this project, I worked alongside a team that was creating a functional web application. The application itself was a blogging platform, targetting expats. My web design contributed to the overall look and feel of the eventual product.",
     key: "1",
+    link: "https://expat-life.netlify.app/"
   },
   {
     src: require("./assets/Screenshot (59).png"),
@@ -39,7 +35,8 @@ const items = [
     tech: "React, Axios, ReactStrap, NASA's Photo API",
     desc:
       "The website shows NASA's current photo of the day. I also created a function to randomly generate a date and make a call to the API using the target date.",
-    key: "2",
+    link: "https://nasa-photo-of-the-day-pink-iota.vercel.app/",
+      key: "2",
   },
   {
     src: require("./assets/Screenshot (60).png"),
@@ -49,6 +46,7 @@ const items = [
     desc:
       "In this project, I collaborated with the website designer to create a cohesive look to the overall application. The website designer chose the colors and themes, and I implemented them into the login and registration page. During the final days of the build, I also assisted the front-end architect with her design for a more user friendly experience.",
     key: "3",
+    link:"https://water-me.netlify.app/index.html"
   },
   {
     src: require("./assets/Screenshot (61).png"),
@@ -58,6 +56,7 @@ const items = [
     desc:
       "I created a website for beer recipes based on my personal preference for IBUs. Each card displays a food pairing, directions and a shopping list of ingredients. The state is handled through redux.",
     key: "4",
+    link:"https://react-redux-app-steel.vercel.app/"
   },
   {
     src: require("./assets/Screenshot (145).png"),
@@ -67,6 +66,7 @@ const items = [
     desc:
       "I collaborated with the backend to design a schema and implement the api in a custom application. I collaborated with the front-end team to create a cohesive look throughout the UX design.",
     key: "5",
+    link: "https://not-a-potluck.gebel.tech/"
   },
   {
     src: require("./assets/Screenshot (146).png"),
@@ -76,13 +76,11 @@ const items = [
     desc:
       "I created a functional backend for a group project. Using TDD, I worked with the Front End Architect to establish and implement a functional schema. I collaborated with the other Backend End Engineer - who was working in Java - to ensure that our schema and databases were cohesive, overall creating less work for the front end.",
     key: "6",
+    link: "https://water-my-plants-ten.vercel.app/"
   },
 ];
 
 function Projects() {
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
 
   return (
     <div>
@@ -111,31 +109,8 @@ function Projects() {
         <FontAwesomeIcon icon={faPython} />
       </div>
       <CardDeck style = {{justifyContent: "center"}}>
-      {items.map((item) => <>
-        <Card key={item.key} style={{minWidth:"20em", maxWidth:"25em", margin:"2rem",padding: "2rem"}}>
-          <CardImg top width="100%" src={item.src} alt="Card image cap" />
-          <CardBody>
-            <CardTitle><h4>{item.header}</h4></CardTitle>
-            <CardSubtitle>{item.role}</CardSubtitle>
-            <CardText>{item.tech}</CardText>
-            <Button className="bg-decor" onClick={toggle}>Button</Button>
-          </CardBody>
-        </Card>
-
-<Modal isOpen={modal} toggle={toggle} key = {item.key}>
-<ModalHeader toggle={toggle}>{item.header}</ModalHeader>
-<ModalBody>
-  {item.desc}
-</ModalBody>
-<CardImg top width="100%" src={item.src} alt="Card image cap" />
-<ModalFooter>
-<FontAwesomeIcon icon = {faGithub} />
-  <Button className="bg-decor" onClick={toggle}>Visit</Button>{' '}
-  <Button color="secondary" onClick={toggle}>Cancel</Button>
-</ModalFooter>
-
-</Modal>
-</>
+      {items.map((item) => 
+      <Project item = {item}/>
       )}
 </CardDeck>
       </div>
