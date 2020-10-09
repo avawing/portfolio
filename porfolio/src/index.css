@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Raleway&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assets/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel Decorative", cursive;
+}
+a{
+  color: white;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.bg-decor {
+  background-color: #eeacaa !important;
+}
+a.bg-decor:hover,
+a.bg-decor:focus,
+button.bg-decor:hover,
+button.bg-decor:focus {
+  background-color: #ffebee !important;
+  color: #eeacaa !important;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover, .nav-link:focus {
+  text-decoration: none;
+}
