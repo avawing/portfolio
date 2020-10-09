@@ -37,7 +37,8 @@ function Project(props){
 </ModalBody>
 <CardImg top width="100%" src={item.src} alt="Card image cap" />
 <ModalFooter>
-<FontAwesomeIcon icon = {faGithub} />
+    <a href = {item.github}>
+<FontAwesomeIcon icon = {faGithub} /></a>
   <Button className="bg-decor"><a href = {item.link}>Visit</a></Button>{' '}
   <Button color="secondary" onClick={toggle}>Cancel</Button>
 </ModalFooter>
